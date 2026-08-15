@@ -1,0 +1,5 @@
+export type DimensionKey = "strategy"|"data"|"people"|"governance"|"technology"|"culture";
+export type Answers = Record<string, number>;
+export type CompanyProfile = { companyName:string; industry:string; companySize:string; companyAge:string; systems:string[]; aiTools:string[]; primaryGoal:string; perceivedBarrier:string };
+export type Scores = Record<DimensionKey, number> & { overall:number };
+export type DiagnosisResult = { scores:Scores; level:{level:number; stage:string; meaning:string}; pattern:{name:string; reason:string}; strongest:DimensionKey; weakest:DimensionKey; perception:string; bottlenecks:Array<{name:string; cause:string; evidence:string; direction:string}>; quickWin:{name:string; problem:string; period:string; data:string; tools:string; owner:string; effect:string; kpis:string[]}; plan90:Array<{phase:string; goal:string; activities:string; output:string; owner:string}>; roadmap:Array<{phase:string; goal:string; activities:string; output:string; owner:string}>; summary:string };
