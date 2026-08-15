@@ -6,7 +6,8 @@
 `pnpm install` → `pnpm test` → `pnpm build`
 
 ## Vercel 환경변수
-- `ADMIN_EMAIL`: 리포트 신청을 받을 관리자 이메일
-- `EMAIL_API_KEY`: 선택. 없으면 서버 로그 mock fallback으로 정상 작동
+- `ADMIN_EMAIL`: 리포트 신청을 받을 비공개 관리자 이메일
+- `RESEND_API_KEY`: Resend 서버 API 키. 없으면 서버 로그 mock fallback으로 작동
+- `REPORT_FROM_EMAIL`: Resend에서 인증한 발신 도메인의 주소
 
 현재 MVP는 Supabase가 필요하지 않습니다. 진행 상태는 `localStorage`에 임시 저장됩니다. 운영 전 실제 이메일 provider, 개인정보처리방침·보유기간·수신거부 문구를 확정하세요.
